@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Se icluyen archivos css o js.-->
+<!--Elementos que no veo pero que necesitamos para que la pagina funcione correctamente-->
+<head>
+  <title>AppDeGatos</title>
+</head>
+<!--es donde vamos a definir la esctructura de la pagina.-->
+
+<body>
+  <!--Como crear un encabezado o heading -->
+  <h2>AppDeGatos</h2>
+  <!-- todo el contenido principal de la pagina va a estar dentro de la etiqueta main -->
+  <main>
+    <h3>Imagenes de gatos:</h3>
+    <!--Para crear un parrafo -->
+    <!-- podemos crear un enlace con <a></a>, href="" se indica la direccdion del enlace-->
+    <p>Haz click aquí para ver mas <a href="https://es.wikipedia.org/wiki/Felis_silvestris_catus" target="_blank"
+        rel="noopener noreferrer">imagenes de gatos.</a></p>
+
+    <!--enlaces internos-->
+    <a href="#parrafo-1"">Parrafo 1</a> 
+      <a href=" #parrafo-2"">Parrafo 2</a>
+    <a href="#parrafo-3"">Parrafo 3</a>
+
+      <br>
+      <!--Para que una imagen sea un enlace debemos rodear el <img> con <a> y definir el href=""-->
+      <!--Si queremos un enlace sin destistino simplemente le ponemos # al href-->
+      <a href=" http://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer"><img
+        src="http://bit.ly/fcc-relaxing-cat" alt="Un lindo gato naranja recostado sobre su espalda."></a>
+    <!--alt + z para adaptar el parrafo al tamaño de la ventana -->
+
+
+    <H3 id="parrafo-1">Parrafo 1</H3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos incidunt non nemo qui omnis, placeat iure!
+      Eaque esse expedita, error earum adipisci odit, aspernatur unde vitae ad fugit, aliquid et.</p>
+
+    <H3 id="parrafo-2">Parrafo 2</H3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eveniet ut dolore commodi tempora ullam deserunt
+      est voluptatum! Natus, velit accusantium? Vitae, vel quaerat! Odit earum consectetur sunt necessitatibus illo?</p>
+
+    <H3 id="parrafo-3">Parrafo 3</H3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti tenetur sunt possimus assumenda iusto numquam,
+      distinctio libero porro exercitationem, aspernatur atque dolore, facilis illo architecto consequatur! Quae
+      laboriosam totam tempora!</p>
+
+    <!--Agregar linea horizontal a la pagina-->
+    <hr>
+
+    <!--Listas no ordenadas, la clave es usar el elemento <ul>-->
+    <h3>Lista de gatos</h3>
+    <!--contenedor <div>, se le aplica css-->
+    <div>
+      <p>Cosas que los gatos <strong>aman</strong>:</p>
+      <ul>
+        <!--Para especificar cada elemento de la lista utilizamos <li>-->
+        <li>Menta gatuna</li>
+        <li>Apuntadores láser</li>
+        <li>Lasaña</li>
+      </ul>
+      <!--Listas ordenadas, se utiliza <ol>-->
+      <!--Para que parte del texto se vea en negrita podemos usar la etiqueta <strong>-->
+      <p>Cosas que los gatos <strong>odian</strong>:</p>
+      <ol>
+        <!--Para hacer que parte del texto se muestre en letra cursiva tenemos que usar la etiqueta <em>-->
+        <li>Tratamiento <em>antipulgas</em></li>
+        <!--Para hacer que parte del texto se muestre tachado usamos la etiqueta <s>-->
+        <li> <s>Truenos</s></li>
+        <li>Otros gatos</li>
+      </ol>
+    </div>
+
+    <img src="imagenes/gato.png" alt="Gato gris con ojos claros">
+
+    <!--Crear un formulario, utilizamos la etiqueta <form>-->
+    <!--el atributo action="" representa la direccion en el servidor del programa que va a manejar esos datos, en este caso seria el achivo enviar-respuesta-->
+    <form action="/enviar-respuesta">
+
+
+      <!--crear un grupo de botones de radio, le agregamos el atributo name y deben tener el mismo nombre-->
+      <!--input de tipo radio-->
+      <br>
+      <label for="interior">
+        <input value="interior" id="interior" type="radio" name="interior-exterior-cama" checked> Interior <br>
+      </label>
+
+      <label for="exterior">
+        <input value="exterior" id="exterior" type="radio" name="interior-exterior-cama"> Exterior <br>
+      </label>
+
+      <label for="cama">
+        <input value="cama" id="cama" type="radio" name="interior-exterior-cama"> Cama <br>
+      </label>
+      <br>
+
+      <!--Casillas de verificacion-->
+      <label for="carinioso">
+        <input value="carinioso" id="carinioso" type="checkbox" name="personalidad" checked> Cariñoso <br>
+      </label>
+
+      <label for="jugueton">
+        <input value="jugueton" id="jugueton" type="checkbox" name="personalidad"> Jugueton <br>
+      </label>
+
+      <label for="amargado">
+        <input value="amargado" id="amargado" type="checkbox" name="personalidad"> Amargado <br>
+      </label>
+      <br>
+
+
+      <!--Uno de los elementos que podemos tener dentro de un formulario es el <input>-->
+      <!--Para indicar que un campo es obligatorio usamos el required-->
+      <input type="text" placeholder="Ingrese el nombre del gato" required>
+      <!--botn enviar-->
+      <button type="submit">Enviar</button>
+
+    </form>
+  </main>
+  <!--pie de pagina-->
+  <!--para hacer que el texto del parrafo sea mas pequeño usamos la etiqueta small-->
+  <footer>
+    <p><small>Sin derechos de autor - <a href="https://www.freecodecamp.org/learn/" target="_blank" rel="noopener noreferrer" >freeCodeCamp.org</a></small></p>
+  </footer>
+</body>
+
+</html>
